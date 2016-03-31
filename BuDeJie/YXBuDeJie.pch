@@ -1,0 +1,58 @@
+//
+//  YXBuDeJie.pch
+//  BuDeJie
+//
+//  Created by 任玉祥 on 16/3/31.
+//  Copyright © 2016年 任玉祥. All rights reserved.
+//
+
+#ifndef YXBuDeJie_pch
+#define YXBuDeJie_pch
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+
+/** 自定义日志输出 */
+#ifdef DEBUG
+
+#define YXLog(...) NSLog(__VA_ARGS__)
+
+#define YXRandomlyColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
+
+#else
+
+#define YXLog(...)
+
+#define YXRandomlyColor [UIColor clearColor]
+
+#endif
+
+/** 屏幕宽度 */
+#define YXScreenWidth [UIScreen mainScreen].bounds.size.width
+/** 屏幕高度 */
+#define YXScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//// 是否为iPhone4 或 4s
+//#define iPhone4sOriPhone4 (JENScreenHeight == 480)
+//// 是否为iPhone5 或 5c 或 5s
+//#define iPhone5sOriPhone5cOriPhone5 (JENScreenHeight == 568)
+//// 是否为iPhone6 或 6s
+//#define iPhone6sOriPhone6 (JENScreenHeight == 667)
+//// 是否为iPhone6Plus 或 6sPlus
+//#define iPhone6sPlusOriPhone6Plus (JENScreenHeight == 736)
+
+/** 打印当前类名 */
+#define YXLogFunc JENLog(@"%s", __func__)
+
+/** 颜色 RGB */
+#define YXColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:(a)]
+
+#ifdef __cplusplus
+#define YXKIT_EXTERN	extern "C" __attribute__((visibility ("default")))
+#else
+#define YXKIT_EXTERN	extern __attribute__((visibility ("default")))
+#endif
+
+#endif /* 是否是OBJC */
+#endif /* YXBuDeJie_pch */
