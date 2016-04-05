@@ -7,6 +7,8 @@
 //
 
 #import "YXMeViewController.h"
+#import "UIBarButtonItem+YXItem.h"
+#import "YXSetttingViewController.h"
 
 @interface YXMeViewController ()
 
@@ -17,21 +19,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = YXRandomlyColor;
+    [self setUpNavigationItem];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+#pragma mark - initial
+- (void)setUpNavigationItem
+{
+    UIBarButtonItem *nightItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" selectedImage:@"mine-moon-icon-click" target:self action:@selector(nightIconClick:)];
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highlightImage:@"mine-setting-icon-click" target:self action:@selector(settingIconClick)];
+    
+    self.navigationItem.rightBarButtonItems = @[settingItem, nightItem];
+    self.navigationItem.title = @"我的";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Events
+- (void)nightIconClick:(UIButton *)btn
+{
+    btn.selected = !btn.selected;
 }
-*/
+
+- (void)settingIconClick
+{
+    [self.navigationController pushViewController:[YXSetttingViewController new] animated:true];
+}
 
 @end

@@ -13,6 +13,7 @@
 #import "YXMeViewController.h"
 #import "YXNewViewController.h"
 #import "YXPublishViewController.h"
+#import "YXTabBar.h"
 
 @interface YXTabBarController ()
 
@@ -22,6 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    YXTabBar *tabBar = [YXTabBar new];
+    
+    [self setValue:tabBar forKey:@"tabBar"];
+
     [self setUpAllChildViewController];
 }
 
@@ -36,7 +42,6 @@
                            image:@"tabBar_essence_icon"
                    selectedImage:@"tabBar_essence_click_icon"];
     
-    
     // 新帖
     [self setUpOneViewController:[YXNewViewController new]
                            title:@"新帖"
@@ -44,16 +49,16 @@
                    selectedImage:@"tabBar_new_click_icon"];
     
     // 发布
-    [self setUpOneViewController:[YXPublishViewController new]
-                           title:nil
-                           image:@"tabBar_publish_icon"
-                   selectedImage:@"tabBar_publish_click_icon"];
+//    [self setUpOneViewController:[YXPublishViewController new]
+//                           title:nil
+//                           image:@"tabBar_publish_icon"
+//                   selectedImage:@"tabBar_publish_click_icon"];
 
     // 关注
     [self setUpOneViewController:[YXFriendTrendsViewController new]
                            title:@"关注"
                            image:@"tabBar_friendTrends_icon"
-                           selectedImage:@"tabBar_friendTrends_click_icon"];
+                   selectedImage:@"tabBar_friendTrends_click_icon"];
     
     // 我
     [self setUpOneViewController:[YXMeViewController new]
@@ -73,23 +78,19 @@
  */
 - (void)setUpOneViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)imageName selectedImage:(NSString *)selectedImageName
 {
-    // 标题
+    
     vc.tabBarItem.title = title;
-    // 图片
+    
     vc.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    // 选中图片
+    
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    // 如果是发布控制器, 没有导航控制器
-    if ([vc isKindOfClass:[YXPublishViewController class]])
-    {
-        [self addChildViewController:vc];
-        
-    }else{
-
-        [self addChildViewController:[[YXNavigationController alloc] initWithRootViewController:vc]];
-    }
+    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateSelected];
     
+    [vc.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:12]} forState:UIControlStateNormal];
+
+    [self addChildViewController:[[YXNavigationController alloc] initWithRootViewController:vc]];
+
     
 }
 @end

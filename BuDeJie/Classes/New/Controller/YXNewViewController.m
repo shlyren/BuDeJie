@@ -7,6 +7,8 @@
 //
 
 #import "YXNewViewController.h"
+#import "UIBarButtonItem+YXItem.h"
+#import "YXSubscribeTagViewController.h"
 
 @interface YXNewViewController ()
 
@@ -17,21 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = YXRandomlyColor;
+    [self setUpNavigationItem];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - initial
+- (void)setUpNavigationItem
+{
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(subscribeTag)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Events
+- (void)subscribeTag
+{
+    [self.navigationController pushViewController:[YXSubscribeTagViewController new] animated:true];
 }
-*/
 
 @end

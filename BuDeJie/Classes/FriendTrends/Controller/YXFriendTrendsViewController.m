@@ -7,6 +7,8 @@
 //
 
 #import "YXFriendTrendsViewController.h"
+#import "UIBarButtonItem+YXItem.h"
+#import "YXLoginRegisterViewController.h"
 
 @interface YXFriendTrendsViewController ()
 
@@ -16,22 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = YXRandomlyColor;
+
+    [self setUpNavigationItem];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - initial
+- (void)setUpNavigationItem
+{
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highlightImage:@"friendsRecommentIconClick" target:self action:@selector(friendsRecomment)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.title = @"我的关注";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Events
+- (void)friendsRecomment
+{
+    YXLogFunc;
 }
-*/
+
+- (IBAction)loginRegisterBtnClick
+{
+    [self presentViewController:[YXLoginRegisterViewController new] animated:true completion:nil];
+}
+
 
 @end
