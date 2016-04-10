@@ -12,12 +12,7 @@
 #ifdef __OBJC__
 
 #import "UIView+Frame.h"
-
-#ifdef __cplusplus
-#define YXKIT_EXTERN	extern "C" __attribute__((visibility ("default")))
-#else
-#define YXKIT_EXTERN	extern __attribute__((visibility ("default")))
-#endif
+#import "YXConst.h"
 
 
 /** 屏幕宽度 */
@@ -36,19 +31,18 @@
 #define iPhone6sPlusOriPhone6Plus (YXScreenHeight == 736)
 
 /** 打印当前类名 */
-#define YXLogFunc NSLog(@"%s", __func__)
+#define YXLogFunc YXLog(@"%s", __func__)
 
 /** 颜色 RGB */
 #define YXColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:(a)]
 
-
+#define YXBaseColor YXColor(213, 213, 213, 1)
 
 #ifdef DEBUG
 
-#define YXLog(...) NSLog(__VA_ARGS__) /** 自定义日志输出 */
+#define YXLog(...) NSLog(__VA_ARGS__); /** 自定义日志输出 */
 
 #define YXRandomlyColor YXColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)  /** 随机颜色 */
-
 
 #else
 #define YXLog(...)

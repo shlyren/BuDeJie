@@ -30,7 +30,6 @@ static NSString *subTagCell = @"subTagCell";
     [super viewDidLoad];
     self.title = @"推荐标签";
     [self loadData];
-    //[self.tableView registerClass:[YXSubscribeTagCell class] forCellReuseIdentifier:subTagCell];
 }
 
 - (void)loadData

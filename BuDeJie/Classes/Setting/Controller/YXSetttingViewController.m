@@ -7,87 +7,77 @@
 //
 
 #import "YXSetttingViewController.h"
+#import "UITableView+Extension.h"
+#import "YXFileManager.h"
+#import "SVProgressHUD.h"
 
+#define filePath NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, true)[0]
 @interface YXSetttingViewController ()
 
 @end
 
 @implementation YXSetttingViewController
 
+static NSString *const settingCellId = @"settingCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:settingCellId];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:settingCellId forIndexPath:indexPath];
+    [tableView tableViewSetExtraCellLineHidden];
     
-    // Configure the cell...
+    cell.textLabel.text = self.fileSizeStr;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    
+    [YXFileManager removeSubDirectoryWithDirPath:filePath];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showSuccessWithStatus:@"清除成功"];
+    
+    [tableView reloadData];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (NSString *)fileSizeStr
+{
+    NSInteger totalSize = [YXFileManager getDirectorySize:filePath];
+    
+    NSString *str = @"清除缓存";
+    
+    if (totalSize > 1000 * 1000)// MB
+    {
+        CGFloat totalSizeF = totalSize / 1000.0 / 1000.0;
+        return [NSString stringWithFormat:@"%@(%.1fMB)",str,totalSizeF];
+    }
+    else if (totalSize > 1000)  // KB
+    {
+        CGFloat totalSizeF = totalSize / 1000.0;
+        return [NSString stringWithFormat:@"%@(%.1fKB)",str,totalSizeF];
+    }
+    else if (totalSize > 0)// B
+    {
+        return [NSString stringWithFormat:@"%@(%ldB)",str,totalSize];
+    }
+    
+    return str;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

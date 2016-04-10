@@ -17,7 +17,8 @@
 
 - (UIButton *)plusBtn
 {
-    if (_plusBtn == nil) {
+    if (_plusBtn == nil)
+    {
         UIButton *plusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [plusBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [plusBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];

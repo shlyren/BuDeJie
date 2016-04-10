@@ -34,6 +34,15 @@
 		551DBD821CB3E56D00482B61 /* YXLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551DBD801CB3E56D00482B61 /* YXLoginRegisterViewController.xib */; };
 		551DBD851CB3EBDD00482B61 /* YXLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 551DBD841CB3EBDD00482B61 /* YXLoginRegisterView.m */; };
 		551DBD871CB3EBE700482B61 /* YXLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551DBD861CB3EBE700482B61 /* YXLoginRegisterView.xib */; };
+		5569CEEF1CB51D61006EB7A0 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */; };
+		5569CEF11CB5201F006EB7A0 /* YXMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5569CEF01CB5201F006EB7A0 /* YXMeViewController.storyboard */; };
+		5569CEF51CB52300006EB7A0 /* YXMeSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEF31CB52300006EB7A0 /* YXMeSquareCell.m */; };
+		5569CEF61CB52300006EB7A0 /* YXMeSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5569CEF41CB52300006EB7A0 /* YXMeSquareCell.xib */; };
+		5569CEF91CB527D2006EB7A0 /* YXMeSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEF81CB527D2006EB7A0 /* YXMeSquareItem.m */; };
+		5569CEFD1CB52E08006EB7A0 /* YXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEFB1CB52E08006EB7A0 /* YXWebViewController.m */; };
+		5569CEFE1CB52E08006EB7A0 /* YXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5569CEFC1CB52E08006EB7A0 /* YXWebViewController.xib */; };
+		5569CF021CB53675006EB7A0 /* YXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CF011CB53675006EB7A0 /* YXFileManager.m */; };
+		5569CF041CB554CF006EB7A0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5569CF031CB554CF006EB7A0 /* WebKit.framework */; };
 		55C289A81CAE2E1F0092A897 /* YXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C289A71CAE2E1F0092A897 /* YXTabBar.m */; };
 		55C3E6841CAD0A5800AA1FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E6831CAD0A5800AA1FBF /* Assets.xcassets */; };
 		55C3E6951CAD1E8000AA1FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6931CAD1E8000AA1FBF /* AppDelegate.m */; };
@@ -45,6 +54,14 @@
 		55C3E6C51CAD31E000AA1FBF /* YXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6C41CAD31E000AA1FBF /* YXMeViewController.m */; };
 		55C3E6C81CAD31E700AA1FBF /* YXNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6C71CAD31E700AA1FBF /* YXNewViewController.m */; };
 		55C3E6CB1CAD320700AA1FBF /* YXPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6CA1CAD320700AA1FBF /* YXPublishViewController.m */; };
+		55EDE50E1CB4A47D00A53A49 /* YXLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE50D1CB4A47D00A53A49 /* YXLoginTextField.m */; };
+		55FC84771CB9175F00E454A3 /* YXTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */; };
+		55FC847A1CB934F000E454A3 /* YXBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */; };
+		55FC847D1CB9350200E454A3 /* YXAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC847C1CB9350200E454A3 /* YXAllViewController.m */; };
+		55FC84801CB9351200E454A3 /* YXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC847F1CB9351200E454A3 /* YXVideoViewController.m */; };
+		55FC84831CB9355A00E454A3 /* YXVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84821CB9355A00E454A3 /* YXVoiceViewController.m */; };
+		55FC84861CB9356A00E454A3 /* YXPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84851CB9356A00E454A3 /* YXPictureViewController.m */; };
+		55FC84891CB9357400E454A3 /* YXWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84881CB9357400E454A3 /* YXWordViewController.m */; };
 		8639905EB0378BB6E5CA8895 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E1B0973FB608558841686A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -92,14 +109,28 @@
 		551DBD831CB3EBDD00482B61 /* YXLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginRegisterView.h; sourceTree = "<group>"; };
 		551DBD841CB3EBDD00482B61 /* YXLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginRegisterView.m; sourceTree = "<group>"; };
 		551DBD861CB3EBE700482B61 /* YXLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXLoginRegisterView.xib; sourceTree = "<group>"; };
+		5569CEED1CB51D61006EB7A0 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
+		5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+placeholder.m"; sourceTree = "<group>"; };
+		5569CEF01CB5201F006EB7A0 /* YXMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YXMeViewController.storyboard; sourceTree = "<group>"; };
+		5569CEF21CB52300006EB7A0 /* YXMeSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMeSquareCell.h; sourceTree = "<group>"; };
+		5569CEF31CB52300006EB7A0 /* YXMeSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMeSquareCell.m; sourceTree = "<group>"; };
+		5569CEF41CB52300006EB7A0 /* YXMeSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXMeSquareCell.xib; sourceTree = "<group>"; };
+		5569CEF71CB527D2006EB7A0 /* YXMeSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMeSquareItem.h; sourceTree = "<group>"; };
+		5569CEF81CB527D2006EB7A0 /* YXMeSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMeSquareItem.m; sourceTree = "<group>"; };
+		5569CEFA1CB52E08006EB7A0 /* YXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXWebViewController.h; sourceTree = "<group>"; };
+		5569CEFB1CB52E08006EB7A0 /* YXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXWebViewController.m; sourceTree = "<group>"; };
+		5569CEFC1CB52E08006EB7A0 /* YXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXWebViewController.xib; sourceTree = "<group>"; };
+		5569CF001CB53675006EB7A0 /* YXFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFileManager.h; sourceTree = "<group>"; };
+		5569CF011CB53675006EB7A0 /* YXFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFileManager.m; sourceTree = "<group>"; };
+		5569CF031CB554CF006EB7A0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		55C289A61CAE2E1F0092A897 /* YXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabBar.h; sourceTree = "<group>"; };
 		55C289A71CAE2E1F0092A897 /* YXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTabBar.m; sourceTree = "<group>"; };
 		55C3E6741CAD0A5800AA1FBF /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C3E6831CAD0A5800AA1FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C3E6881CAD0A5800AA1FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55C3E6921CAD1E8000AA1FBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Others/AppDelegate.h; sourceTree = "<group>"; };
-		55C3E6931CAD1E8000AA1FBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Others/AppDelegate.m; sourceTree = "<group>"; };
-		55C3E6941CAD1E8000AA1FBF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Others/main.m; sourceTree = "<group>"; };
+		55C3E6921CAD1E8000AA1FBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/Others/AppDelegate.h; sourceTree = "<group>"; };
+		55C3E6931CAD1E8000AA1FBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/Others/AppDelegate.m; sourceTree = "<group>"; };
+		55C3E6941CAD1E8000AA1FBF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Others/main.m; sourceTree = "<group>"; };
 		55C3E6981CAD2B0700AA1FBF /* YXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNavigationController.h; sourceTree = "<group>"; };
 		55C3E6991CAD2B0700AA1FBF /* YXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNavigationController.m; sourceTree = "<group>"; };
 		55C3E69B1CAD2B1D00AA1FBF /* YXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabBarController.h; sourceTree = "<group>"; };
@@ -115,6 +146,22 @@
 		55C3E6C71CAD31E700AA1FBF /* YXNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNewViewController.m; sourceTree = "<group>"; };
 		55C3E6C91CAD320700AA1FBF /* YXPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPublishViewController.h; sourceTree = "<group>"; };
 		55C3E6CA1CAD320700AA1FBF /* YXPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPublishViewController.m; sourceTree = "<group>"; };
+		55EDE50C1CB4A47D00A53A49 /* YXLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginTextField.h; sourceTree = "<group>"; };
+		55EDE50D1CB4A47D00A53A49 /* YXLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginTextField.m; sourceTree = "<group>"; };
+		55FC84751CB9175F00E454A3 /* YXTitleViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTitleViewButton.h; sourceTree = "<group>"; };
+		55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTitleViewButton.m; sourceTree = "<group>"; };
+		55FC84781CB934F000E454A3 /* YXBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBaseTableViewController.h; sourceTree = "<group>"; };
+		55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBaseTableViewController.m; sourceTree = "<group>"; };
+		55FC847B1CB9350200E454A3 /* YXAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAllViewController.h; sourceTree = "<group>"; };
+		55FC847C1CB9350200E454A3 /* YXAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAllViewController.m; sourceTree = "<group>"; };
+		55FC847E1CB9351200E454A3 /* YXVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXVideoViewController.h; sourceTree = "<group>"; };
+		55FC847F1CB9351200E454A3 /* YXVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXVideoViewController.m; sourceTree = "<group>"; };
+		55FC84811CB9355A00E454A3 /* YXVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXVoiceViewController.h; sourceTree = "<group>"; };
+		55FC84821CB9355A00E454A3 /* YXVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXVoiceViewController.m; sourceTree = "<group>"; };
+		55FC84841CB9356A00E454A3 /* YXPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPictureViewController.h; sourceTree = "<group>"; };
+		55FC84851CB9356A00E454A3 /* YXPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPictureViewController.m; sourceTree = "<group>"; };
+		55FC84871CB9357400E454A3 /* YXWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXWordViewController.h; sourceTree = "<group>"; };
+		55FC84881CB9357400E454A3 /* YXWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXWordViewController.m; sourceTree = "<group>"; };
 		D54BE9B7026A9408BCDA07E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EBA455FE21AAC32182B36185 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5569CF041CB554CF006EB7A0 /* WebKit.framework in Frameworks */,
 				8639905EB0378BB6E5CA8895 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +239,7 @@
 		55157DBD1CB3613E000D37D1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5569CEFF1CB53669006EB7A0 /* FileManager */,
 				551DBD591CB3A2D100482B61 /* Category */,
 				551DBD601CB3A2D100482B61 /* Const */,
 				551DBD611CB3A2D100482B61 /* Networking */,
@@ -235,6 +284,8 @@
 				551DBD5D1CB3A2D100482B61 /* UITableView+Extension.m */,
 				551DBD5E1CB3A2D100482B61 /* UIView+Frame.h */,
 				551DBD5F1CB3A2D100482B61 /* UIView+Frame.m */,
+				5569CEED1CB51D61006EB7A0 /* UITextField+placeholder.h */,
+				5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -257,6 +308,15 @@
 				551DBD651CB3A2D100482B61 /* YXRequestData.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		5569CEFF1CB53669006EB7A0 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				5569CF001CB53675006EB7A0 /* YXFileManager.h */,
+				5569CF011CB53675006EB7A0 /* YXFileManager.m */,
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 		55C289A51CAE2DF40092A897 /* View */ = {
@@ -300,6 +360,9 @@
 			children = (
 				5505BCBB1CAF870A0063B97C /* 启动图片 */,
 				55C3E6831CAD0A5800AA1FBF /* Assets.xcassets */,
+				55C3E6921CAD1E8000AA1FBF /* AppDelegate.h */,
+				55C3E6931CAD1E8000AA1FBF /* AppDelegate.m */,
+				55C3E6941CAD1E8000AA1FBF /* main.m */,
 				55C3E69E1CAD2BF300AA1FBF /* YXBuDeJie.pch */,
 				55C3E6881CAD0A5800AA1FBF /* Info.plist */,
 			);
@@ -317,9 +380,6 @@
 				55C3E6AE1CAD2E8E00AA1FBF /* Me(我) */,
 				55C3E68F1CAD0BC500AA1FBF /* Main(主要) */,
 				55C3E6901CAD0BC500AA1FBF /* Others(其他) */,
-				55C3E6921CAD1E8000AA1FBF /* AppDelegate.h */,
-				55C3E6931CAD1E8000AA1FBF /* AppDelegate.m */,
-				55C3E6941CAD1E8000AA1FBF /* main.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -371,6 +431,18 @@
 			children = (
 				55C3E6BD1CAD317300AA1FBF /* YXEssenceViewController.h */,
 				55C3E6BE1CAD317300AA1FBF /* YXEssenceViewController.m */,
+				55FC84781CB934F000E454A3 /* YXBaseTableViewController.h */,
+				55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */,
+				55FC847B1CB9350200E454A3 /* YXAllViewController.h */,
+				55FC847C1CB9350200E454A3 /* YXAllViewController.m */,
+				55FC847E1CB9351200E454A3 /* YXVideoViewController.h */,
+				55FC847F1CB9351200E454A3 /* YXVideoViewController.m */,
+				55FC84811CB9355A00E454A3 /* YXVoiceViewController.h */,
+				55FC84821CB9355A00E454A3 /* YXVoiceViewController.m */,
+				55FC84841CB9356A00E454A3 /* YXPictureViewController.h */,
+				55FC84851CB9356A00E454A3 /* YXPictureViewController.m */,
+				55FC84871CB9357400E454A3 /* YXWordViewController.h */,
+				55FC84881CB9357400E454A3 /* YXWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -385,6 +457,8 @@
 		55C3E6A91CAD2E8E00AA1FBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55FC84751CB9175F00E454A3 /* YXTitleViewButton.h */,
+				55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +500,8 @@
 				551DBD831CB3EBDD00482B61 /* YXLoginRegisterView.h */,
 				551DBD841CB3EBDD00482B61 /* YXLoginRegisterView.m */,
 				551DBD861CB3EBE700482B61 /* YXLoginRegisterView.xib */,
+				55EDE50C1CB4A47D00A53A49 /* YXLoginTextField.h */,
+				55EDE50D1CB4A47D00A53A49 /* YXLoginTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -446,6 +522,10 @@
 			children = (
 				55C3E6C31CAD31E000AA1FBF /* YXMeViewController.h */,
 				55C3E6C41CAD31E000AA1FBF /* YXMeViewController.m */,
+				5569CEF01CB5201F006EB7A0 /* YXMeViewController.storyboard */,
+				5569CEFA1CB52E08006EB7A0 /* YXWebViewController.h */,
+				5569CEFB1CB52E08006EB7A0 /* YXWebViewController.m */,
+				5569CEFC1CB52E08006EB7A0 /* YXWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +533,8 @@
 		55C3E6B01CAD2E8E00AA1FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5569CEF71CB527D2006EB7A0 /* YXMeSquareItem.h */,
+				5569CEF81CB527D2006EB7A0 /* YXMeSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +542,9 @@
 		55C3E6B11CAD2E8E00AA1FBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5569CEF21CB52300006EB7A0 /* YXMeSquareCell.h */,
+				5569CEF31CB52300006EB7A0 /* YXMeSquareCell.m */,
+				5569CEF41CB52300006EB7A0 /* YXMeSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,6 +627,7 @@
 		6FD3F05E1F6AF591A0A73FAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5569CF031CB554CF006EB7A0 /* WebKit.framework */,
 				16E1B0973FB608558841686A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -624,8 +710,11 @@
 				5505BCC81CAF870A0063B97C /* LaunchImage.png in Resources */,
 				55C3E6841CAD0A5800AA1FBF /* Assets.xcassets in Resources */,
 				551DBD821CB3E56D00482B61 /* YXLoginRegisterViewController.xib in Resources */,
+				5569CEFE1CB52E08006EB7A0 /* YXWebViewController.xib in Resources */,
 				551DBD7D1CB3E3C000482B61 /* YXFriendTrendsViewController.xib in Resources */,
+				5569CEF61CB52300006EB7A0 /* YXMeSquareCell.xib in Resources */,
 				5505BCC51CAF870A0063B97C /* LaunchImage-700@2x.png in Resources */,
+				5569CEF11CB5201F006EB7A0 /* YXMeViewController.storyboard in Resources */,
 				5505BCC71CAF870A0063B97C /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				551DBD521CB3A12D00482B61 /* YXADViewController.xib in Resources */,
 				5505BCC31CAF870A0063B97C /* LaunchImage-568h@2x.png in Resources */,
@@ -690,6 +779,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C3E6BF1CAD317300AA1FBF /* YXEssenceViewController.m in Sources */,
+				55FC847A1CB934F000E454A3 /* YXBaseTableViewController.m in Sources */,
+				5569CEEF1CB51D61006EB7A0 /* UITextField+placeholder.m in Sources */,
 				55C3E6C21CAD31D800AA1FBF /* YXFriendTrendsViewController.m in Sources */,
 				551DBD7B1CB3DF8900482B61 /* UIImage+image.m in Sources */,
 				551DBD781CB3D41300482B61 /* YXSubscribeTagCell.m in Sources */,
@@ -699,20 +790,31 @@
 				551DBD511CB3A12D00482B61 /* YXADViewController.m in Sources */,
 				551DBD811CB3E56D00482B61 /* YXLoginRegisterViewController.m in Sources */,
 				55C3E69D1CAD2B1D00AA1FBF /* YXTabBarController.m in Sources */,
+				55FC84831CB9355A00E454A3 /* YXVoiceViewController.m in Sources */,
 				551DBD701CB3D02800482B61 /* YXSubscribeTagViewController.m in Sources */,
 				551DBD671CB3A2D100482B61 /* UITableView+Extension.m in Sources */,
 				55C3E6C51CAD31E000AA1FBF /* YXMeViewController.m in Sources */,
 				55C3E6C81CAD31E700AA1FBF /* YXNewViewController.m in Sources */,
+				55FC84891CB9357400E454A3 /* YXWordViewController.m in Sources */,
+				5569CEF51CB52300006EB7A0 /* YXMeSquareCell.m in Sources */,
+				5569CF021CB53675006EB7A0 /* YXFileManager.m in Sources */,
 				551DBD681CB3A2D100482B61 /* UIView+Frame.m in Sources */,
 				551DBD851CB3EBDD00482B61 /* YXLoginRegisterView.m in Sources */,
 				55C3E6CB1CAD320700AA1FBF /* YXPublishViewController.m in Sources */,
 				551DBD661CB3A2D100482B61 /* UIBarButtonItem+YXItem.m in Sources */,
+				5569CEF91CB527D2006EB7A0 /* YXMeSquareItem.m in Sources */,
 				551DBD551CB3A13D00482B61 /* YXADItem.m in Sources */,
 				55C3E69A1CAD2B0700AA1FBF /* YXNavigationController.m in Sources */,
+				55FC84861CB9356A00E454A3 /* YXPictureViewController.m in Sources */,
+				55FC84771CB9175F00E454A3 /* YXTitleViewButton.m in Sources */,
 				551DBD6D1CB3A2E500482B61 /* YXConst.m in Sources */,
+				55FC847D1CB9350200E454A3 /* YXAllViewController.m in Sources */,
+				55FC84801CB9351200E454A3 /* YXVideoViewController.m in Sources */,
+				5569CEFD1CB52E08006EB7A0 /* YXWebViewController.m in Sources */,
 				55C3E6961CAD1E8000AA1FBF /* main.m in Sources */,
 				551DBD751CB3D2BC00482B61 /* YXSubscribeTagItem.m in Sources */,
 				55C289A81CAE2E1F0092A897 /* YXTabBar.m in Sources */,
+				55EDE50E1CB4A47D00A53A49 /* YXLoginTextField.m in Sources */,
 				55C3E6951CAD1E8000AA1FBF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,4 +54,9 @@
 {
     [self dismissViewControllerAnimated:true completion:nil];
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:true];
+}
 @end

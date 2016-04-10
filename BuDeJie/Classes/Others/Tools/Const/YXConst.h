@@ -6,9 +6,17 @@
 //  Copyright © 2016年 任玉祥. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 /** 获取帖子的主url */
-YXKIT_EXTERN NSString *const YXBaseUrl;
+UIKIT_EXTERN NSString *const YXBaseUrl;
 
 /** 启动广告的uel */
-YXKIT_EXTERN NSString *const YXAdUrl;
+UIKIT_EXTERN NSString *const YXAdUrl;
+
+UIKIT_EXTERN CGFloat const YXNavBarMaxY;
+
+UIKIT_EXTERN CGFloat const YXNavH;
+
+UIKIT_EXTERN CGFloat const YXTabBarH;
+
+UIKIT_EXTERN CGFloat const YXTitleViewH;

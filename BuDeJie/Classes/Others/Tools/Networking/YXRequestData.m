@@ -13,6 +13,7 @@
 
 #import "YXAdItem.h"
 #import "YXSubscribeTagItem.h"
+#import "YXMeSquareItem.h"
 
 @implementation YXRequestData
 /**
@@ -63,6 +64,31 @@
        // YXLog(@"%@", responseObject);
         if (success) {
             success([YXSubscribeTagItem mj_objectArrayWithKeyValuesArray:responseObject]);
+        }
+        
+    } failure:^(NSError *error) {
+        if (failure) {
+            YXLog(@"推荐标签获取失败 %@", error);
+        }
+    }];
+}
+
+/**
+ *  每次打开app后，点击“我”板块获得到的内容
+ *
+ *  @param success 成功
+ *  @param failure 失败
+ */
++ (void)requestMeSquareSuccess:(void (^)(NSArray *squares))success failure:(void (^)(NSError *error))failure
+{
+    NSDictionary *parameters = @{@"a" : @"square",
+                                 @"c" : @"topic",
+                                };
+    
+    [YXHttpTool GET:YXBaseUrl parameters:parameters success:^(id responseObject) {
+        
+        if (success) {
+            success([YXMeSquareItem mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]]);
         }
         
     } failure:^(NSError *error) {

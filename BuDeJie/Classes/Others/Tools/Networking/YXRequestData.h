@@ -28,4 +28,12 @@
  */
 + (void)requestSubTagsSuccess:(void (^)(NSArray *subTags))success failure:(void (^)(NSError *error))failure;
 
+
+/**
+ *  每次打开app后，点击“我”板块获得到的内容
+ *
+ *  @param success 成功
+ *  @param failure 失败
+ */
++ (void)requestMeSquareSuccess:(void (^)(NSArray *squares))success failure:(void (^)(NSError *error))failure;
 @end
