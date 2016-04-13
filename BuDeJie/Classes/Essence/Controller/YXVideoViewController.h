@@ -6,8 +6,8 @@
 //  Copyright © 2016年 任玉祥. All rights reserved.
 //
 
-#import "YXBaseTableViewController.h"
+#import "YXTopicViewController.h"
 
-@interface YXVideoViewController : YXBaseTableViewController
+@interface YXVideoViewController : YXTopicViewController
 
 @end

@@ -54,9 +54,16 @@
 		55C3E6C51CAD31E000AA1FBF /* YXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6C41CAD31E000AA1FBF /* YXMeViewController.m */; };
 		55C3E6C81CAD31E700AA1FBF /* YXNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6C71CAD31E700AA1FBF /* YXNewViewController.m */; };
 		55C3E6CB1CAD320700AA1FBF /* YXPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E6CA1CAD320700AA1FBF /* YXPublishViewController.m */; };
+		55E92D311CBE522D002FC2EF /* YXTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D301CBE522D002FC2EF /* YXTopicItem.m */; };
+		55E92D351CBE5683002FC2EF /* YXRootItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D341CBE5683002FC2EF /* YXRootItem.m */; };
+		55E92D381CBE5692002FC2EF /* YXInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D371CBE5692002FC2EF /* YXInfoItem.m */; };
+		55E92D3B1CBE58F0002FC2EF /* YXTopicTopCmtItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D3A1CBE58F0002FC2EF /* YXTopicTopCmtItem.m */; };
+		55E92D3E1CBE5907002FC2EF /* YXUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D3D1CBE5907002FC2EF /* YXUserItem.m */; };
+		55E92D421CBE61F0002FC2EF /* YXTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E92D401CBE61F0002FC2EF /* YXTopicCell.m */; };
+		55E92D431CBE61F0002FC2EF /* YXTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E92D411CBE61F0002FC2EF /* YXTopicCell.xib */; };
 		55EDE50E1CB4A47D00A53A49 /* YXLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE50D1CB4A47D00A53A49 /* YXLoginTextField.m */; };
 		55FC84771CB9175F00E454A3 /* YXTitleViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */; };
-		55FC847A1CB934F000E454A3 /* YXBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */; };
+		55FC847A1CB934F000E454A3 /* YXTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84791CB934F000E454A3 /* YXTopicViewController.m */; };
 		55FC847D1CB9350200E454A3 /* YXAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC847C1CB9350200E454A3 /* YXAllViewController.m */; };
 		55FC84801CB9351200E454A3 /* YXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC847F1CB9351200E454A3 /* YXVideoViewController.m */; };
 		55FC84831CB9355A00E454A3 /* YXVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC84821CB9355A00E454A3 /* YXVoiceViewController.m */; };
@@ -146,12 +153,25 @@
 		55C3E6C71CAD31E700AA1FBF /* YXNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNewViewController.m; sourceTree = "<group>"; };
 		55C3E6C91CAD320700AA1FBF /* YXPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPublishViewController.h; sourceTree = "<group>"; };
 		55C3E6CA1CAD320700AA1FBF /* YXPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPublishViewController.m; sourceTree = "<group>"; };
+		55E92D2F1CBE522D002FC2EF /* YXTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicItem.h; sourceTree = "<group>"; };
+		55E92D301CBE522D002FC2EF /* YXTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicItem.m; sourceTree = "<group>"; };
+		55E92D331CBE5683002FC2EF /* YXRootItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRootItem.h; sourceTree = "<group>"; };
+		55E92D341CBE5683002FC2EF /* YXRootItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRootItem.m; sourceTree = "<group>"; };
+		55E92D361CBE5692002FC2EF /* YXInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXInfoItem.h; sourceTree = "<group>"; };
+		55E92D371CBE5692002FC2EF /* YXInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXInfoItem.m; sourceTree = "<group>"; };
+		55E92D391CBE58F0002FC2EF /* YXTopicTopCmtItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicTopCmtItem.h; sourceTree = "<group>"; };
+		55E92D3A1CBE58F0002FC2EF /* YXTopicTopCmtItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicTopCmtItem.m; sourceTree = "<group>"; };
+		55E92D3C1CBE5907002FC2EF /* YXUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUserItem.h; sourceTree = "<group>"; };
+		55E92D3D1CBE5907002FC2EF /* YXUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUserItem.m; sourceTree = "<group>"; };
+		55E92D3F1CBE61F0002FC2EF /* YXTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicCell.h; sourceTree = "<group>"; };
+		55E92D401CBE61F0002FC2EF /* YXTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicCell.m; sourceTree = "<group>"; };
+		55E92D411CBE61F0002FC2EF /* YXTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTopicCell.xib; sourceTree = "<group>"; };
 		55EDE50C1CB4A47D00A53A49 /* YXLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginTextField.h; sourceTree = "<group>"; };
 		55EDE50D1CB4A47D00A53A49 /* YXLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginTextField.m; sourceTree = "<group>"; };
 		55FC84751CB9175F00E454A3 /* YXTitleViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTitleViewButton.h; sourceTree = "<group>"; };
 		55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTitleViewButton.m; sourceTree = "<group>"; };
-		55FC84781CB934F000E454A3 /* YXBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBaseTableViewController.h; sourceTree = "<group>"; };
-		55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBaseTableViewController.m; sourceTree = "<group>"; };
+		55FC84781CB934F000E454A3 /* YXTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicViewController.h; sourceTree = "<group>"; };
+		55FC84791CB934F000E454A3 /* YXTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicViewController.m; sourceTree = "<group>"; };
 		55FC847B1CB9350200E454A3 /* YXAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAllViewController.h; sourceTree = "<group>"; };
 		55FC847C1CB9350200E454A3 /* YXAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAllViewController.m; sourceTree = "<group>"; };
 		55FC847E1CB9351200E454A3 /* YXVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXVideoViewController.h; sourceTree = "<group>"; };
@@ -239,6 +259,7 @@
 		55157DBD1CB3613E000D37D1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				55E92D321CBE5670002FC2EF /* Model */,
 				5569CEFF1CB53669006EB7A0 /* FileManager */,
 				551DBD591CB3A2D100482B61 /* Category */,
 				551DBD601CB3A2D100482B61 /* Const */,
@@ -431,8 +452,8 @@
 			children = (
 				55C3E6BD1CAD317300AA1FBF /* YXEssenceViewController.h */,
 				55C3E6BE1CAD317300AA1FBF /* YXEssenceViewController.m */,
-				55FC84781CB934F000E454A3 /* YXBaseTableViewController.h */,
-				55FC84791CB934F000E454A3 /* YXBaseTableViewController.m */,
+				55FC84781CB934F000E454A3 /* YXTopicViewController.h */,
+				55FC84791CB934F000E454A3 /* YXTopicViewController.m */,
 				55FC847B1CB9350200E454A3 /* YXAllViewController.h */,
 				55FC847C1CB9350200E454A3 /* YXAllViewController.m */,
 				55FC847E1CB9351200E454A3 /* YXVideoViewController.h */,
@@ -450,6 +471,12 @@
 		55C3E6A81CAD2E8E00AA1FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55E92D2F1CBE522D002FC2EF /* YXTopicItem.h */,
+				55E92D301CBE522D002FC2EF /* YXTopicItem.m */,
+				55E92D391CBE58F0002FC2EF /* YXTopicTopCmtItem.h */,
+				55E92D3A1CBE58F0002FC2EF /* YXTopicTopCmtItem.m */,
+				55E92D3C1CBE5907002FC2EF /* YXUserItem.h */,
+				55E92D3D1CBE5907002FC2EF /* YXUserItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,6 +486,9 @@
 			children = (
 				55FC84751CB9175F00E454A3 /* YXTitleViewButton.h */,
 				55FC84761CB9175F00E454A3 /* YXTitleViewButton.m */,
+				55E92D3F1CBE61F0002FC2EF /* YXTopicCell.h */,
+				55E92D401CBE61F0002FC2EF /* YXTopicCell.m */,
+				55E92D411CBE61F0002FC2EF /* YXTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -624,6 +654,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		55E92D321CBE5670002FC2EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55E92D331CBE5683002FC2EF /* YXRootItem.h */,
+				55E92D341CBE5683002FC2EF /* YXRootItem.m */,
+				55E92D361CBE5692002FC2EF /* YXInfoItem.h */,
+				55E92D371CBE5692002FC2EF /* YXInfoItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6FD3F05E1F6AF591A0A73FAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +755,7 @@
 				551DBD7D1CB3E3C000482B61 /* YXFriendTrendsViewController.xib in Resources */,
 				5569CEF61CB52300006EB7A0 /* YXMeSquareCell.xib in Resources */,
 				5505BCC51CAF870A0063B97C /* LaunchImage-700@2x.png in Resources */,
+				55E92D431CBE61F0002FC2EF /* YXTopicCell.xib in Resources */,
 				5569CEF11CB5201F006EB7A0 /* YXMeViewController.storyboard in Resources */,
 				5505BCC71CAF870A0063B97C /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				551DBD521CB3A12D00482B61 /* YXADViewController.xib in Resources */,
@@ -779,12 +821,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C3E6BF1CAD317300AA1FBF /* YXEssenceViewController.m in Sources */,
-				55FC847A1CB934F000E454A3 /* YXBaseTableViewController.m in Sources */,
+				55FC847A1CB934F000E454A3 /* YXTopicViewController.m in Sources */,
 				5569CEEF1CB51D61006EB7A0 /* UITextField+placeholder.m in Sources */,
+				55E92D351CBE5683002FC2EF /* YXRootItem.m in Sources */,
 				55C3E6C21CAD31D800AA1FBF /* YXFriendTrendsViewController.m in Sources */,
 				551DBD7B1CB3DF8900482B61 /* UIImage+image.m in Sources */,
+				55E92D311CBE522D002FC2EF /* YXTopicItem.m in Sources */,
 				551DBD781CB3D41300482B61 /* YXSubscribeTagCell.m in Sources */,
 				551DBD691CB3A2D100482B61 /* YXHttpTool.m in Sources */,
+				55E92D3E1CBE5907002FC2EF /* YXUserItem.m in Sources */,
 				5505BCB51CAF82DC0063B97C /* YXSetttingViewController.m in Sources */,
 				551DBD6A1CB3A2D100482B61 /* YXRequestData.m in Sources */,
 				551DBD511CB3A12D00482B61 /* YXADViewController.m in Sources */,
@@ -795,12 +840,15 @@
 				551DBD671CB3A2D100482B61 /* UITableView+Extension.m in Sources */,
 				55C3E6C51CAD31E000AA1FBF /* YXMeViewController.m in Sources */,
 				55C3E6C81CAD31E700AA1FBF /* YXNewViewController.m in Sources */,
+				55E92D421CBE61F0002FC2EF /* YXTopicCell.m in Sources */,
+				55E92D381CBE5692002FC2EF /* YXInfoItem.m in Sources */,
 				55FC84891CB9357400E454A3 /* YXWordViewController.m in Sources */,
 				5569CEF51CB52300006EB7A0 /* YXMeSquareCell.m in Sources */,
 				5569CF021CB53675006EB7A0 /* YXFileManager.m in Sources */,
 				551DBD681CB3A2D100482B61 /* UIView+Frame.m in Sources */,
 				551DBD851CB3EBDD00482B61 /* YXLoginRegisterView.m in Sources */,
 				55C3E6CB1CAD320700AA1FBF /* YXPublishViewController.m in Sources */,
+				55E92D3B1CBE58F0002FC2EF /* YXTopicTopCmtItem.m in Sources */,
 				551DBD661CB3A2D100482B61 /* UIBarButtonItem+YXItem.m in Sources */,
 				5569CEF91CB527D2006EB7A0 /* YXMeSquareItem.m in Sources */,
 				551DBD551CB3A13D00482B61 /* YXADItem.m in Sources */,

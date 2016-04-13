@@ -18,9 +18,6 @@
 @implementation YXRequestData
 /**
  *  请求广告数据
- *
- *  @param success 请求成功
- *  @param failure 请求失败
  */
 + (void)requestAdSuccess:(void (^)(YXADItem *adItem))success failure:(void (^)(NSError *error))failure
 {
@@ -48,9 +45,6 @@
 
 /**
  *  请求推荐标签数据
- *
- *  @param success 请求成功
- *  @param failure 请求失败
  */
 + (void)requestSubTagsSuccess:(void (^)(NSArray *subTags))success failure:(void (^)(NSError *error))failure
 {
@@ -75,9 +69,6 @@
 
 /**
  *  每次打开app后，点击“我”板块获得到的内容
- *
- *  @param success 成功
- *  @param failure 失败
  */
 + (void)requestMeSquareSuccess:(void (^)(NSArray *squares))success failure:(void (^)(NSError *error))failure
 {
@@ -97,4 +88,48 @@
         }
     }];
 }
+
+/**
+ *  获取帖子数据
+ */
++ (void)requestTopicParemeters:(id)paremeters success:(void (^)(YXRootItem *roopItem))success failure:(void (^)(NSError *error))failure
+{
+    [YXHttpTool GET:YXBaseUrl parameters:paremeters success:^(NSDictionary *responseObject) {
+        
+        //[responseObject writeToFile:@"/Users/Schnappi/Desktop/topic29.plist" atomically:YES];
+        [YXRootItem mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"list" : [YXTopicItem class]};
+        }];
+        [YXTopicItem mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"top_cmt" : [YXTopicTopCmtItem class]};
+        }];
+        [YXTopicTopCmtItem mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{@"topCmt_id" : @"id"};
+        }];
+        [YXUserItem mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{@"user_id" : @"id"};
+        }];
+        [YXTopicItem mj_setupIgnoredPropertyNames:^NSArray *{
+            return @[@"rowHeight"];
+        }];
+        
+        YXRootItem *root = [YXRootItem mj_objectWithKeyValues:responseObject];
+        
+        if (success) success(root);
+        
+    } failure:^(NSError *error) {
+        if (failure) {
+            YXLog(@"帖子获取失败 %@", error);
+        }
+    }];
+}
 @end
+
+
+
+
+
+
+
+
+

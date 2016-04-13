@@ -33,18 +33,16 @@
 @implementation YXEssenceViewController
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
      _titles = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
-    
-    self.view.backgroundColor = [UIColor orangeColor];
     self.automaticallyAdjustsScrollViewInsets = false;
     [self setUpNavigationItem];
     
-    [self setupView];
-    
     [self setupAllChidlViewController];
     
+    [self setupView];
 }
 
 #pragma mark - initial
@@ -58,18 +56,18 @@
         scrollView.contentSize = CGSizeMake(_titles.count * YXScreenWidth, 0);
         scrollView.delegate = self;
         scrollView.pagingEnabled = true;
+        scrollView.scrollsToTop = false;
         scrollView.showsVerticalScrollIndicator = false;
         scrollView.showsHorizontalScrollIndicator = false;
-        [self.view addSubview:scrollView];
-        _scrollView = scrollView;
+        scrollView.backgroundColor = YXBaseColor;
+        [self.view addSubview:_scrollView = scrollView];
     }
     
     // titleView
     {
         UIView *titlesView = [[UIView alloc] initWithFrame:CGRectMake(0, YXNavBarMaxY, YXScreenWidth, YXTitleViewH)];
-        titlesView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-        [self.view addSubview:titlesView];
-        _titlesView = titlesView;
+        titlesView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
+        [self.view addSubview: _titlesView = titlesView];
     }
     
     // title
@@ -96,8 +94,7 @@
         UIView *titlesLineView = [UIView new];
         titlesLineView.backgroundColor = [_preTitleBtn titleColorForState:UIControlStateSelected];
         titlesLineView.frame = CGRectMake(0, titleLineViewY, 0, titleLineViewH);
-        [self.titlesView addSubview:titlesLineView];
-        _titlesLineView = titlesLineView;
+        [self.titlesView addSubview:_titlesLineView = titlesLineView];
         
         [_preTitleBtn.titleLabel sizeToFit];
         titlesLineView.width = _preTitleBtn.titleLabel.width;
@@ -113,57 +110,68 @@
     [self addChildViewController:[YXVoiceViewController new]];
     [self addChildViewController:[YXPictureViewController new]];
     [self addChildViewController:[YXWordViewController new]];
-    
-    
-    for (NSInteger i = 0; i < self.childViewControllers.count; i++)
-    {
-        UIViewController *viewController = self.childViewControllers[i];
-        viewController.view.frame = CGRectMake(i * YXScreenWidth, 0, YXScreenWidth, YXScreenHeight);
-        
-        [self.scrollView addSubview:viewController.view];
-        
-    }
 }
 
 
 #pragma mark - scrollView delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSInteger index = scrollView.contentOffset.x / YXScreenWidth;
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    //if (index > self.titlesView.subviews.count - 1) return;
     [self titleButtonClick:self.titlesView.subviews[index]];
 }
 
 #pragma mark - Events
 - (void)titleButtonClick:(YXTitleViewButton *)titleButton
 {
+    if (self.preTitleBtn == titleButton) return;
+    
     self.preTitleBtn.selected = false;
     titleButton.selected = true;
     self.preTitleBtn = titleButton;
     
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         self.titlesLineView.centerX = titleButton.centerX;
         self.titlesLineView.width = titleButton.titleLabel.width;
+        
+        CGPoint offset = self.scrollView.contentOffset;
+        offset.x = titleButton.tag * self.scrollView.width;
+        self.scrollView.contentOffset = offset;
+        
+    } completion:^(BOOL finished) {
+        // 懒加载
+        UIViewController *childVc = self.childViewControllers[titleButton.tag];
+        childVc.view.frame = self.scrollView.bounds;
+        [self.scrollView addSubview:childVc.view];
+        
     }];
     
-    [self.scrollView setContentOffset:CGPointMake(titleButton.tag * YXScreenWidth, 0) animated:true];
-    
+    // 设置滚动到顶部
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++)
+    {
+        UIViewController *childVc = self.childViewControllers[i];
+        if (!childVc.isViewLoaded) continue;
+        if ([childVc.view isKindOfClass:[UIScrollView class]])
+        {
+            UIScrollView *scrollView = (UIScrollView *)childVc.view;
+            scrollView.scrollsToTop = i == titleButton.tag;
+        }
+    }
 }
 
 #pragma mark - 初始化导航栏按钮
 - (void)setUpNavigationItem
 {
-    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImage:@"nav_item_game_icon"
-                                                highlightImage:@"nav_item_game_click_icon"
-                                                        target:nil
-                                                        action:nil];
-    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_item_game_icon"
+                                                            highlightImage:@"nav_item_game_click_icon"
+                                                                    target:nil
+                                                                    action:nil];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationButtonRandom"
+                                                             highlightImage:@"navigationButtonRandomClick"
+                                                                     target:nil
+                                                                     action:nil];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    
-    UIBarButtonItem *rightItem = [UIBarButtonItem itemWithImage:@"navigationButtonRandom"
-                                                 highlightImage:@"navigationButtonRandomClick"
-                                                         target:nil
-                                                         action:nil];
-    self.navigationItem.rightBarButtonItem = rightItem;
 }
 @end

@@ -23,3 +23,5 @@ CGFloat const YXNavH = 44;
 CGFloat const YXTabBarH = 49;
 
 CGFloat const YXTitleViewH = 35;
+
+CGFloat const YXBaseMargin = 10;

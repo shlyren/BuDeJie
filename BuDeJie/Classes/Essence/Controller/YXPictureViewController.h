@@ -1,5 +1,5 @@
 //
-//  YXWordViewController.h
+//  YXPictureViewController.h
 //  BuDeJie
 //
 //  Created by 任玉祥 on 16/4/9.
@@ -8,6 +8,6 @@
 
 #import "YXTopicViewController.h"
 
-@interface YXWordViewController : YXTopicViewController
+@interface YXPictureViewController : YXTopicViewController
 
 @end

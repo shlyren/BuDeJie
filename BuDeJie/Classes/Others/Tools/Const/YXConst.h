@@ -20,3 +20,5 @@ UIKIT_EXTERN CGFloat const YXNavH;
 UIKIT_EXTERN CGFloat const YXTabBarH;
 
 UIKIT_EXTERN CGFloat const YXTitleViewH;
+
+UIKIT_EXTERN CGFloat const YXBaseMargin;

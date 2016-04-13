@@ -64,6 +64,7 @@ static NSInteger cols = 4;
     collectionView.backgroundColor = YXBaseColor;
     collectionView.delegate = self;
     collectionView.dataSource = self;
+    collectionView.scrollsToTop = false;
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([YXMeSquareCell class]) bundle:nil] forCellWithReuseIdentifier:collectionCellId];
     _collectionView = collectionView;
     
@@ -98,6 +99,7 @@ static NSInteger cols = 4;
             _collectionView.height = (itemWH + margin) * rows - margin;
         
             weakSelf.tableView.tableFooterView = _collectionView;
+            [weakSelf.tableView reloadData];
         }
         
     } failure:nil];
@@ -141,6 +143,7 @@ static NSInteger cols = 4;
     if (![item.url containsString:@"http:"]) return;
     
     YXWebViewController *webVc = [YXWebViewController new];
+    webVc.title = item.name;
     webVc.url = item.url;
     
     [self.navigationController pushViewController:webVc animated:true];
