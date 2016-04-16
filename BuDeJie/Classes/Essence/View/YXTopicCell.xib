@@ -91,7 +91,7 @@
                                 <state key="normal" title="评论" image="mainCellComment">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" title="topicId" image="mainCellCommentClick"/>
+                                <state key="highlighted" image="mainCellCommentClick"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="tns-MJ-zjQ">
                                 <rect key="frame" x="80" y="5" width="1" height="29"/>

@@ -10,6 +10,7 @@
 #import "YXTopicCell.h"
 #import "UITableView+Extension.h"
 #import "SVProgressHUD.h"
+#import "SDImageCache.h"
 
 @interface YXTopicViewController ()
 
@@ -124,6 +125,11 @@ static NSString *const topicId = @"topicId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 - (void)endRefreshing

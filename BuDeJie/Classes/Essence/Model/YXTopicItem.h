@@ -39,7 +39,29 @@ typedef NS_ENUM (NSUInteger,YXTopicType) {
 /** 最热评论 */
 @property (nonatomic, strong) NSArray *top_cmt;
 
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+/** 小图 */
+@property (nonatomic, strong) NSString *image0;
+/** 中图 */
+@property (nonatomic, strong) NSString *image2;
+/** 大图 */
+@property (nonatomic, strong) NSString *image1;
+/** 播放数量 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 声音文件的长度 */
+@property (nonatomic, assign) NSInteger voicetime;
+
+
+/** 是否为动态图 */
+@property (nonatomic, assign) BOOL is_gif;
+/** 是否为超长图 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 /** rowHeight */
 @property (nonatomic, assign) CGFloat rowHeight;
+
+@property (nonatomic, assign) CGRect middleFrame;
 @end

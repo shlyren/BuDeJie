@@ -19,4 +19,7 @@
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 
+
++ (instancetype)viewFromNib;
+
 @end

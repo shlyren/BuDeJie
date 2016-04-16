@@ -66,7 +66,7 @@
     // titleView
     {
         UIView *titlesView = [[UIView alloc] initWithFrame:CGRectMake(0, YXNavBarMaxY, YXScreenWidth, YXTitleViewH)];
-        titlesView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
+        titlesView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
         [self.view addSubview: _titlesView = titlesView];
     }
     

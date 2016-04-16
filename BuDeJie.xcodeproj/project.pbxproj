@@ -34,6 +34,15 @@
 		551DBD821CB3E56D00482B61 /* YXLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551DBD801CB3E56D00482B61 /* YXLoginRegisterViewController.xib */; };
 		551DBD851CB3EBDD00482B61 /* YXLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 551DBD841CB3EBDD00482B61 /* YXLoginRegisterView.m */; };
 		551DBD871CB3EBE700482B61 /* YXLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551DBD861CB3EBE700482B61 /* YXLoginRegisterView.xib */; };
+		553BDD8C1CC101C5006BE7BF /* YXTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553BDD8B1CC101C5006BE7BF /* YXTopicVideoView.m */; };
+		553BDD8F1CC101D1006BE7BF /* YXTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553BDD8E1CC101D1006BE7BF /* YXTopicVoiceView.m */; };
+		553BDD921CC101E1006BE7BF /* YXTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553BDD911CC101E1006BE7BF /* YXTopicPictureView.m */; };
+		553BDD941CC101F0006BE7BF /* YXTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BDD931CC101F0006BE7BF /* YXTopicVideoView.xib */; };
+		553BDD961CC101FB006BE7BF /* YXTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BDD951CC101FB006BE7BF /* YXTopicVoiceView.xib */; };
+		553BDD981CC10201006BE7BF /* YXTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BDD971CC10201006BE7BF /* YXTopicPictureView.xib */; };
+		553BDDBD1CC257FE006BE7BF /* UIImageView+download.m in Sources */ = {isa = PBXBuildFile; fileRef = 553BDDBC1CC257FE006BE7BF /* UIImageView+download.m */; };
+		553BDDC11CC259B6006BE7BF /* YXBigPicutreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553BDDBF1CC259B6006BE7BF /* YXBigPicutreViewController.m */; };
+		553BDDC21CC259B6006BE7BF /* YXBigPicutreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BDDC01CC259B6006BE7BF /* YXBigPicutreViewController.xib */; };
 		5569CEEF1CB51D61006EB7A0 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */; };
 		5569CEF11CB5201F006EB7A0 /* YXMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5569CEF01CB5201F006EB7A0 /* YXMeViewController.storyboard */; };
 		5569CEF51CB52300006EB7A0 /* YXMeSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5569CEF31CB52300006EB7A0 /* YXMeSquareCell.m */; };
@@ -116,6 +125,20 @@
 		551DBD831CB3EBDD00482B61 /* YXLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginRegisterView.h; sourceTree = "<group>"; };
 		551DBD841CB3EBDD00482B61 /* YXLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginRegisterView.m; sourceTree = "<group>"; };
 		551DBD861CB3EBE700482B61 /* YXLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXLoginRegisterView.xib; sourceTree = "<group>"; };
+		553BDD8A1CC101C5006BE7BF /* YXTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicVideoView.h; sourceTree = "<group>"; };
+		553BDD8B1CC101C5006BE7BF /* YXTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicVideoView.m; sourceTree = "<group>"; };
+		553BDD8D1CC101D1006BE7BF /* YXTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicVoiceView.h; sourceTree = "<group>"; };
+		553BDD8E1CC101D1006BE7BF /* YXTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicVoiceView.m; sourceTree = "<group>"; };
+		553BDD901CC101E1006BE7BF /* YXTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTopicPictureView.h; sourceTree = "<group>"; };
+		553BDD911CC101E1006BE7BF /* YXTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTopicPictureView.m; sourceTree = "<group>"; };
+		553BDD931CC101F0006BE7BF /* YXTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTopicVideoView.xib; sourceTree = "<group>"; };
+		553BDD951CC101FB006BE7BF /* YXTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTopicVoiceView.xib; sourceTree = "<group>"; };
+		553BDD971CC10201006BE7BF /* YXTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTopicPictureView.xib; sourceTree = "<group>"; };
+		553BDDBB1CC257FE006BE7BF /* UIImageView+download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+download.h"; sourceTree = "<group>"; };
+		553BDDBC1CC257FE006BE7BF /* UIImageView+download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+download.m"; sourceTree = "<group>"; };
+		553BDDBE1CC259B6006BE7BF /* YXBigPicutreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBigPicutreViewController.h; sourceTree = "<group>"; };
+		553BDDBF1CC259B6006BE7BF /* YXBigPicutreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBigPicutreViewController.m; sourceTree = "<group>"; };
+		553BDDC01CC259B6006BE7BF /* YXBigPicutreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXBigPicutreViewController.xib; sourceTree = "<group>"; };
 		5569CEED1CB51D61006EB7A0 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
 		5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+placeholder.m"; sourceTree = "<group>"; };
 		5569CEF01CB5201F006EB7A0 /* YXMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YXMeViewController.storyboard; sourceTree = "<group>"; };
@@ -307,6 +330,8 @@
 				551DBD5F1CB3A2D100482B61 /* UIView+Frame.m */,
 				5569CEED1CB51D61006EB7A0 /* UITextField+placeholder.h */,
 				5569CEEE1CB51D61006EB7A0 /* UITextField+placeholder.m */,
+				553BDDBB1CC257FE006BE7BF /* UIImageView+download.h */,
+				553BDDBC1CC257FE006BE7BF /* UIImageView+download.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -464,6 +489,9 @@
 				55FC84851CB9356A00E454A3 /* YXPictureViewController.m */,
 				55FC84871CB9357400E454A3 /* YXWordViewController.h */,
 				55FC84881CB9357400E454A3 /* YXWordViewController.m */,
+				553BDDBE1CC259B6006BE7BF /* YXBigPicutreViewController.h */,
+				553BDDBF1CC259B6006BE7BF /* YXBigPicutreViewController.m */,
+				553BDDC01CC259B6006BE7BF /* YXBigPicutreViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -489,6 +517,15 @@
 				55E92D3F1CBE61F0002FC2EF /* YXTopicCell.h */,
 				55E92D401CBE61F0002FC2EF /* YXTopicCell.m */,
 				55E92D411CBE61F0002FC2EF /* YXTopicCell.xib */,
+				553BDD8A1CC101C5006BE7BF /* YXTopicVideoView.h */,
+				553BDD8B1CC101C5006BE7BF /* YXTopicVideoView.m */,
+				553BDD931CC101F0006BE7BF /* YXTopicVideoView.xib */,
+				553BDD8D1CC101D1006BE7BF /* YXTopicVoiceView.h */,
+				553BDD8E1CC101D1006BE7BF /* YXTopicVoiceView.m */,
+				553BDD951CC101FB006BE7BF /* YXTopicVoiceView.xib */,
+				553BDD901CC101E1006BE7BF /* YXTopicPictureView.h */,
+				553BDD911CC101E1006BE7BF /* YXTopicPictureView.m */,
+				553BDD971CC10201006BE7BF /* YXTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -753,13 +790,17 @@
 				551DBD821CB3E56D00482B61 /* YXLoginRegisterViewController.xib in Resources */,
 				5569CEFE1CB52E08006EB7A0 /* YXWebViewController.xib in Resources */,
 				551DBD7D1CB3E3C000482B61 /* YXFriendTrendsViewController.xib in Resources */,
+				553BDDC21CC259B6006BE7BF /* YXBigPicutreViewController.xib in Resources */,
 				5569CEF61CB52300006EB7A0 /* YXMeSquareCell.xib in Resources */,
 				5505BCC51CAF870A0063B97C /* LaunchImage-700@2x.png in Resources */,
+				553BDD981CC10201006BE7BF /* YXTopicPictureView.xib in Resources */,
 				55E92D431CBE61F0002FC2EF /* YXTopicCell.xib in Resources */,
 				5569CEF11CB5201F006EB7A0 /* YXMeViewController.storyboard in Resources */,
 				5505BCC71CAF870A0063B97C /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				553BDD941CC101F0006BE7BF /* YXTopicVideoView.xib in Resources */,
 				551DBD521CB3A12D00482B61 /* YXADViewController.xib in Resources */,
 				5505BCC31CAF870A0063B97C /* LaunchImage-568h@2x.png in Resources */,
+				553BDD961CC101FB006BE7BF /* YXTopicVoiceView.xib in Resources */,
 				5505BCC61CAF870A0063B97C /* LaunchImage-800-667h@2x.png in Resources */,
 				5505BCC91CAF870A0063B97C /* LaunchImage@2x.png in Resources */,
 			);
@@ -820,6 +861,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553BDDBD1CC257FE006BE7BF /* UIImageView+download.m in Sources */,
 				55C3E6BF1CAD317300AA1FBF /* YXEssenceViewController.m in Sources */,
 				55FC847A1CB934F000E454A3 /* YXTopicViewController.m in Sources */,
 				5569CEEF1CB51D61006EB7A0 /* UITextField+placeholder.m in Sources */,
@@ -827,6 +869,7 @@
 				55C3E6C21CAD31D800AA1FBF /* YXFriendTrendsViewController.m in Sources */,
 				551DBD7B1CB3DF8900482B61 /* UIImage+image.m in Sources */,
 				55E92D311CBE522D002FC2EF /* YXTopicItem.m in Sources */,
+				553BDD8C1CC101C5006BE7BF /* YXTopicVideoView.m in Sources */,
 				551DBD781CB3D41300482B61 /* YXSubscribeTagCell.m in Sources */,
 				551DBD691CB3A2D100482B61 /* YXHttpTool.m in Sources */,
 				55E92D3E1CBE5907002FC2EF /* YXUserItem.m in Sources */,
@@ -834,13 +877,16 @@
 				551DBD6A1CB3A2D100482B61 /* YXRequestData.m in Sources */,
 				551DBD511CB3A12D00482B61 /* YXADViewController.m in Sources */,
 				551DBD811CB3E56D00482B61 /* YXLoginRegisterViewController.m in Sources */,
+				553BDDC11CC259B6006BE7BF /* YXBigPicutreViewController.m in Sources */,
 				55C3E69D1CAD2B1D00AA1FBF /* YXTabBarController.m in Sources */,
 				55FC84831CB9355A00E454A3 /* YXVoiceViewController.m in Sources */,
 				551DBD701CB3D02800482B61 /* YXSubscribeTagViewController.m in Sources */,
 				551DBD671CB3A2D100482B61 /* UITableView+Extension.m in Sources */,
 				55C3E6C51CAD31E000AA1FBF /* YXMeViewController.m in Sources */,
+				553BDD8F1CC101D1006BE7BF /* YXTopicVoiceView.m in Sources */,
 				55C3E6C81CAD31E700AA1FBF /* YXNewViewController.m in Sources */,
 				55E92D421CBE61F0002FC2EF /* YXTopicCell.m in Sources */,
+				553BDD921CC101E1006BE7BF /* YXTopicPictureView.m in Sources */,
 				55E92D381CBE5692002FC2EF /* YXInfoItem.m in Sources */,
 				55FC84891CB9357400E454A3 /* YXWordViewController.m in Sources */,
 				5569CEF51CB52300006EB7A0 /* YXMeSquareCell.m in Sources */,

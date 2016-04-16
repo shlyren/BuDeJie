@@ -21,13 +21,28 @@
     
     _rowHeight += [self.text boundingRectWithSize:CGSizeMake(YXScreenWidth - 2 * YXBaseMargin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : YXBaseFont} context:nil].size.height + YXBaseMargin;
     
+//    _rowHeight += height;
     
+    if (self.type != YXTopicTypeWord) {
+        CGFloat middleW = YXScreenWidth - 2 * YXBaseMargin;
+        CGFloat middleX = YXBaseMargin;
+        CGFloat middleY = _rowHeight;
+        CGFloat middleH = self.height / self.width * middleW;
+        
+        if (middleH >= YXScreenHeight) {
+            middleH = 200;
+            self.bigPicture = true;
+        }
+        
+        self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
+        _rowHeight += middleH + YXBaseMargin;
+    }
     
     
     if (_top_cmt.count) {
         YXTopicTopCmtItem *topCmtItem = _top_cmt.firstObject;
         
-        topCmtItem.content = topCmtItem.content ? topCmtItem.content : @"[语音消息]";
+        topCmtItem.content = topCmtItem.content.length ? topCmtItem.content : @"[语音消息]";
         NSString *content = [NSString stringWithFormat:@"%@: %@",topCmtItem.user.username, topCmtItem.content];
 
         _rowHeight += 20;
